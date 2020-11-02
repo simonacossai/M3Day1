@@ -82,7 +82,7 @@ const palindrome=(word)=>{
         return "the word is not palindrome"
     }
 }
-console.log(palindrome("abba"));
+//console.log(palindrome("abba"));
 
 /* 5) REVERSE INT
 Given an integer, return an integer that is the reverse
@@ -94,6 +94,23 @@ ordering of numbers.
     reverseInt(-15) === -51
     reverseInt(-90) === -9
  */
+const reverseInt=(num)=>{
+   let number= num.toString();
+    let arrayNum = number.split("");
+    let minus;
+if(arrayNum[0]==="-"){
+    minus=arrayNum[0];
+}
+    let joinedNum= arrayNum.reverse().join("");
+    let newNumber= parseInt(joinedNum);
+    if(minus==="-"){
+        return minus+newNumber;
+    }else{
+        return newNumber;
+    }
+    
+}
+//console.log(reverseInt(31));
 
 /* 6) STEPS
 Write a function that accepts a positive number N.
