@@ -6,7 +6,7 @@ commonly used in the string.
     maxChar("apple 1231111") === "1"
 */
 let findMostUsed = function (word) {
-    var max = 0,
+    var max = 0;
         maxChar = '';
      word.split('').forEach(function(char){
        if(word.split(char).length > max) {
@@ -130,6 +130,20 @@ step has spaces on the right hand side!
         '##  '
         '### '
         '####' */
+const halfPyramid=(num)=>{
+    let char = '';
+
+    for(i = 0; i <= num ; i++) {
+        for(j = 1; j <= i; j++) {
+           char += '#';
+        }
+        char += '\n';
+    }
+    return char;
+}
+
+console.log(halfPyramid(10));
+
 
 /* 7) REVERSE STRING
 Given a string, return a new string with the reversed
