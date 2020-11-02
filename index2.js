@@ -142,7 +142,7 @@ const halfPyramid=(num)=>{
     return char;
 }
 
-console.log(halfPyramid(10));
+//console.log(halfPyramid(10));
 
 
 /* 7) REVERSE STRING
@@ -153,6 +153,13 @@ order of characters
     reverse('hello') === 'olleh'
     reverse('Greetings!') === '!sgniteerG'
  */
+const reverseString =(word)=>{
+    let newArray = word.split("");
+    let reversedArray = newArray.reverse();
+    let newWord = reversedArray.join("");
+    return newWord;
+}
+//console.log(reverseString("hello!"));
 
 /* 8) CHUNK
 Given an array and chunk size, divide the array into many subarrays
