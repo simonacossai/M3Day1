@@ -36,7 +36,7 @@ function anagrams(firstString, secondString) {
     return word.replace(/[^\w]/g, '').split('').sort().join('').toLowerCase();
   }
 
-  console.log(anagrams("rail safety", "fairy tales"));
+ // console.log(anagrams("rail safety", "fairy tales"));
 
 
 /* 3) ANAGRAMS 2
@@ -44,6 +44,23 @@ Given a word and a list of possible anagrams, select the correct sublist.
 --- Examples 
     "listen" and a list of candidates like "enlists" "google" "inlets" "banana" the program should return a list containing "inlets".
 */
+
+let word1 = "listen";
+let array1= ["enlists", "google", "inlets", "banana"];
+
+function findAnagrams() {
+    for(let i=0; i<array1.length; i++){
+     if(clean(word1) === clean(array1[i])){
+        return array1[i];
+     }
+    }
+  }
+  
+  function clean(word) {
+    return word.replace(/[^\w]/g, '').split('').sort().join('').toLowerCase();
+  }
+
+  //console.log(findAnagrams());
 
 /* 4) PALINDROME
 Given a string, return true if the string is a palindrome
@@ -54,6 +71,18 @@ and punctuation in determining if the string is a palindrome.
     palindrome("abba") === true
     palindrome("abcdefg") === false
  */
+
+const palindrome=(word)=>{
+    let arrayOfWord = word.split("");
+    let reverseArray= arrayOfWord.reverse();
+    let newWordReversed = reverseArray.join("");
+    if (word===newWordReversed){
+        return "the word is palindrome"
+    }else{
+        return "the word is not palindrome"
+    }
+}
+console.log(palindrome("abba"));
 
 /* 5) REVERSE INT
 Given an integer, return an integer that is the reverse
