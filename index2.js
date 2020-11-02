@@ -171,6 +171,18 @@ where each subarray is of length size
     chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
     chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 */
+const chunkArray=(array, chunk)=>{
+    let i = 0;
+    let tempArray = [];
+    
+    for (i = 0; i< array.length; i+= chunk) {
+        chunks = array.slice(i, i+chunk);
+        tempArray.push(chunks);
+    }
+
+    return tempArray;
+}
+//console.log(chunkArray([1,2,3,4,5,6,7,8,9,10], 2));
 
 /* 9) PYRAMID
 Write a function that accepts a positive number N.
@@ -187,6 +199,22 @@ pyramid has spaces on both the left and right hand sides
         '  #  '
         ' ### '
         '#####' */
+
+    const pyramid=(num)=>{
+            for (let i = 0; i <num; i++) {
+                let result = '';
+                for (let j =0; j <num - i; j++) {
+                    result += ' ';
+                }
+                for (let k = 0; k <= i; k++) {
+                    result += '# ';
+                }
+              console.log(result);  
+            } 
+        }
+        
+pyramid(7);
+
 
 /* 10) SPYRAL MATRIX
 Write a function that accepts an integer N
